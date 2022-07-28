@@ -17,21 +17,21 @@
 
 ## initialize options
 
-	Button          = Form button for disabling submit
+	Button          = Form button for disabling submit         
 
-	Repeat          = Password verify field
+	Repeat          = Password verify field			    (Option: false or true)
 
-	CapitalLength   = Minimal number of upper case letters
+	CapitalLength   = Minimal number of upper case letters      (Must be a number)
 
-	SpecialLength   = Minimal number of special characters
+	SpecialLength   = Minimal number of special characters      (Must be a number)
 
-	PasswordLength  = Minimal password length
+	PasswordLength  = Minimal password length		    (Must be a number)
 
-	LowerLength     = Minimal number of lower case letters
+	LowerLength     = Minimal number of lower case letters      (Must be a number)
 
-	NummbersLength  = Minimal number of numbers in password
+	NummbersLength  = Minimal number of numbers in password     (Must be a number)
 
-	type            = The type of reporting (Tooltip or border)
+	type            = The type of reporting   	    	    (Option: Tooltip or border)
 
 	TooltipTitle = Tooltip title text
 	
