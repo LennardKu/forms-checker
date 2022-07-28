@@ -46,8 +46,8 @@
 	2 Language's available
 	Dutch (Country code: Nl)
 	English (Country code: En)
-	How to set your language:
+	How to set you're  language:
 	
-	<script src="{Location to yout script}" lang="{country code}"></script>
+	<script src="{Location to you're script}" lang="{country code}"></script>
 	
 	
