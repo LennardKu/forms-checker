@@ -1,3 +1,5 @@
+const Language = ((document.currentScript.getAttribute('lang')) ? document.currentScript.getAttribute('lang') : 'Nl');
+
 const PasswordCheck =  (CheckPassword,Element,options,config)=>{
     
     RulesEngine = PasswordStrength = '';
@@ -195,11 +197,19 @@ const PasswordCheck =  (CheckPassword,Element,options,config)=>{
                 TooltipContent = '<div class="'+TooltipUuid+' password-check-tooltip">';
                     TooltipContent += '<h3>'+TooltipTitle+'</h3>';
 
-                    if(PasswordLength > 0){ TooltipContent += '<span class="PasswordLength"> Minimaal '+PasswordLength+' karakters</span>'; }
-                    if(NummbersLength  > 0){ TooltipContent += '<span class="NummbersLength"> Minimaal '+NummbersLength+' getallen</span>'; }
-                    if(SpecialLength > 0){ TooltipContent += '<span class="SpecialLength"> Minimaal '+SpecialLength+' speciale karakters</span>'; }
-                    if(CapitalLength > 0){ TooltipContent += '<span class="CapitalLength"> Minimaal '+CapitalLength+' hoofd letters </span>'; }
-                    if(LowerLength > 0){ TooltipContent += '<span class="LowerLength"> Minimaal '+LowerLength+' kleine letters</span>'; }
+                    if(Language == 'Nl'){
+                        FirsWord = 'Minimaal ';
+                    }
+
+                    if(Language == 'En'){
+                        FirsWord = 'Minimal ';
+                    }
+
+                    if(PasswordLength > 0){ TooltipContent += '<span class="PasswordLength">'+FirsWord+PasswordLength+((Language == 'Nl') ? ' karakters' : ' characters')+' </span>'; }
+                    if(NummbersLength  > 0){ TooltipContent += '<span class="NummbersLength">'+FirsWord+NummbersLength+((Language == 'Nl') ? ' nummers' : ' numbers')+'</span>'; }
+                    if(SpecialLength > 0){ TooltipContent += '<span class="SpecialLength">'+FirsWord+SpecialLength+((Language == 'Nl') ? ' speciale karakters' : 'special characters')+'</span>'; }
+                    if(CapitalLength > 0){ TooltipContent += '<span class="CapitalLength">'+FirsWord+CapitalLength+((Language == 'Nl') ? ' hoofdletters' : ' uppercase letters')+'</span>'; }
+                    if(LowerLength > 0){ TooltipContent += '<span class="LowerLength">'+FirsWord+LowerLength+((Language == 'Nl') ? ' kleine letters' : ' lowercase letters')+'</span>'; }
 
                 TooltipContent += '</div>';
 
@@ -246,7 +256,6 @@ const PasswordCheck =  (CheckPassword,Element,options,config)=>{
         // Tooltip 
         TooltipUuid = Element.attr('checker-TooltipUuid');
         TooltipTitle = Element.attr('checker-TooltipTitle');
-        TooltipUuid = Element.attr('checker-TooltipUuid');
 
 
         input = Element.val();
