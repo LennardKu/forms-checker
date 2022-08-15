@@ -39,7 +39,9 @@ To the password field you must add
 
 	type            = The type of reporting   	    	    (Option: Tooltip or border)
 
-	TooltipTitle = Tooltip title text
+	TooltipTitle =   Tooltip title text
+	
+	SimplePasswordChecker = Check password for common password (Option: true or false)
 	
 ## Styling tooltip
 	.password-check-tooltip       defines de tooltip wrapper
