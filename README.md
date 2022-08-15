@@ -1,7 +1,7 @@
 # Password-Checker
 
 ## How to initialize
- 	PasswordCheck(false,'password',{
+ 	PasswordCheck(false,'{Field name}',{
  
    	button:'#sumbit_button',
    
@@ -14,6 +14,12 @@
    	type:'tooltip',
    
  	},true)
+	
+	
+To the password field you must add
+
+ 	password-checker="{Field name}" 
+	Example: <input  password-checker="{Field name}" type="password" />
 
 ## initialize options
 
