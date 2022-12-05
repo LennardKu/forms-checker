@@ -1,61 +1,88 @@
-# Password-Checker
 
-## How to initialize
- 	PasswordCheck(false,'{Field name}',{
+# Forms validator
+
+A brief description of what this project does and who it's for.
+
+This script can be used to register users to you're site with valid credentials.
+
+
+
+
+## Usage/Examples
+
+To use this project download the checker script and place it in the head of you're site
+
+```html
+  <script src="${Location to the script}/checker.js"></script>
+```
+
+
+### Example
+
+To use it on a form 
+
+``` html
+    <form id="YoureFormId">
+        <input type="email">
+        <input type="password">
+        <input type="password" data-repeat-password="true">
+        <button type="submit">Submit</button>
+    </form>
+```
+
+``` javascript
+new formChecker.config(
+    document.getElementById('YoureFormId'),{
+        'email-checker': true,
+        'password-repeat': true,
+        'button': true,
+        'common-password':true,
+    }
+);
+```
+
+#### Or you can initialize all the elements at one
+
+``` html
+    <form data-form-checker>
+        <input type="email">
+        <input type="password">
+        <input type="password" data-repeat-password="true">
+        <button type="submit">Submit</button>
+    </form>
+```
+
+``` javascript
+new formChecker.init();
+```
+
+With this method you can set options with data attributes
+
+#### example
+``` html
+    <form data-form-checker data-common-password="true" data-email-checker="true">
+        <input type="email">
+        <input type="password">
+        <input type="password" data-repeat-password="true">
+        <button type="submit">Submit</button>
+    </form>
+```
+
+#### How to use each element.
+
+ - Button: to use the button option create inside you're form a input or button element with the type **submit**
+ - Email Checker: Create inside you're form a input field with the type **email**
+ - Password repeat: Password repeat creates a repeat field. You can also assign youre own password repeat field. Create after you're password field a new password field with the *data attribute* **data-repeat-password** 
  
-   	button:'#sumbit_button',
-   
-   	Repeat:true,  
-   
-   	CapitalLength:2,
-   
-   	SpecialLength:0,
-   
-   	type:'tooltip',
-   
- 	},true)
-	
-	
-To the password field you must add
 
- 	password-checker="{Field name}" 
-	Example: <input  password-checker="{Field name}" type="password" />
 
-## initialize options
 
-	Button          = Form button for disabling submit         
 
-	Repeat          = Password verify field			    (Option: false or true)
+## Demo
 
-	CapitalLength   = Minimal number of upper case letters      (Must be a number)
+[View demo here](https://demo.lennardkuenen.dev/posts/validator/)
 
-	SpecialLength   = Minimal number of special characters      (Must be a number)
+## Authors
 
-	PasswordLength  = Minimal password length		    (Must be a number)
+- [@LennardKu](https://www.github.com/LennardKu)
 
-	LowerLength     = Minimal number of lower case letters      (Must be a number)
-
-	NummbersLength  = Minimal number of numbers in password     (Must be a number)
-
-	type            = The type of reporting   	    	    (Option: Tooltip or border)
-
-	TooltipTitle =   Tooltip title text
-	
-	SimplePasswordChecker = Check password for common password (Option: true or false)
-	
-## Styling tooltip
-	.password-check-tooltip       defines de tooltip wrapper
-	.password-check-tooltip h3    defines de tooltip title
-	.password-check-tooltip span  defines de tooltip text
-	
-## Language settings
-	Setting Language 
-	
-	2 Language's available
-	Dutch (Country code: Nl)
-	English (Country code: En)
-	How to set you're  language:
-	
-	<script src="{Location to you're script}" lang="{country code}"></script>
-	
-	

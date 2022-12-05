@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password checker - Sample</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Form validator - Sample</title>
+    <script src="checker.js"></script>
 </head>
 <body>
+
+  <form action="" data-email-checker data-password-repeat data-form-checker="">
+    <input type="email" placeholder=""">
+    <input type="password">
+  </form>
+
+  <form action="" data-form-checker="">
+    <input type="email">
+  </form>
   
-  <input type="password" password-checker="password" >
-  <button id="sumbit_button">Submit</button>
-  
-  <script src="Checker.js"></script>
+  <form action="" id="notInit">
+    <input type="email">
+    <input type="password">
+    <button type="submit">Test</button>
+  </form>
+
   <script type="text/javascript">
-    PasswordCheck(false,'password',{
-        button:'#sumbit_button',
-        Repeat:true,
-        CapitalLength:2,
-        SpecialLength:2,
-        type:'tooltip',
-    },true);
+    formChecker.init();
+
+    // Sample not through init 
+    new formChecker.config(
+      document.getElementById('notInit'),{
+        'email-checker': true,
+        'password-repeat': true,
+        'button': true,
+        'common-password':true,
+      }
+    );
+
   </script>
 </body>
 </html>
