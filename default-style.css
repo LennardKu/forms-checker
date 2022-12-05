@@ -1,0 +1,10 @@
+.progress-bar-wrapper{width: 100%; display: flex; background-color: grey; height: 5px; min-width: 100px; border-radius: 3px; }
+.progress-bar-wrapper .progress-bar-container{height: 100%; width: 10%; transition: width 0.5s;}
+.progress-bar-wrapper .progress-bar-container.weak{background-color: red; width: calc(33%);}
+.progress-bar-wrapper .progress-bar-container.medium{background-color: yellow; width: calc(66%);}
+.progress-bar-wrapper .progress-bar-container.strong{background-color: green; width: calc(100%);}
+
+input.weak{border-color: red}
+input.medium{border-color: yellow}
+input.strong{border-color: green}
+
