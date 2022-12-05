@@ -1,4 +1,7 @@
+- Stable version:
+v1
 
+### ! --- Still in development --- !
 # Forms validator
 
 A brief description of what this project does and who it's for.
