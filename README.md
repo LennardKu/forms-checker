@@ -1,14 +1,11 @@
-- Stable version:
-v1
 
-### ! --- Still in development --- !
 # Forms validator
 
 A brief description of what this project does and who it's for.
 
 This script can be used to register users to you're site with valid credentials.
 
-
+**Please report bugs**
 
 
 ## Usage/Examples
