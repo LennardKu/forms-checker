@@ -1,10 +1,29 @@
+:root{
+  --weak: red;
+  --medium: yellow;
+  --strong: green;
+}
+
+/* Progress  */
 .progress-bar-wrapper{width: 100%; display: flex; background-color: grey; height: 5px; min-width: 100px; border-radius: 3px; }
 .progress-bar-wrapper .progress-bar-container{height: 100%; width: 10%; transition: width 0.5s;}
-.progress-bar-wrapper .progress-bar-container.weak{background-color: red; width: calc(33%);}
-.progress-bar-wrapper .progress-bar-container.medium{background-color: yellow; width: calc(66%);}
-.progress-bar-wrapper .progress-bar-container.strong{background-color: green; width: calc(100%);}
+.progress-bar-wrapper .progress-bar-container.weak{background-color: var(--weak); width: calc(33%);}
+.progress-bar-wrapper .progress-bar-container.medium{background-color: var(--medium); width: calc(66%);}
+.progress-bar-wrapper .progress-bar-container.strong{background-color: var(--strong); width: calc(100%);}
 
-input.weak{border-color: red}
-input.medium{border-color: yellow}
-input.strong{border-color: green}
+/* Tooltip  */
+.tooltip-wrapper{display: none; max-width: 300px; width: 100%; padding: 15px;}
+.tooltip-wrapper.active{display: flex;}
+.tooltip-wrapper .tooltip-container .tooltip-inner{display: flex; flex-direction: column;}
+.tooltip-wrapper .tooltip-container .tooltip-inner span{color: var(--weak);}
+
+.tooltip-wrapper .tooltip-container .tooltip-inner.specialCharacters span.specialCharacters,
+.tooltip-wrapper .tooltip-container .tooltip-inner.numbers span.numbers,
+.tooltip-wrapper .tooltip-container .tooltip-inner.lowerCaseLetters span.lowerCaseLetters,
+.tooltip-wrapper .tooltip-container .tooltip-inner.capitalLetters span.capitalLetters{color: var(--strong);}
+
+/* input  */
+input.weak{border-color: var(--weak);background-color: var(--weak);}
+input.medium{border-color: var(--medium);background-color: var(--medium);}
+input.strong{border-color: var(--strong); background-color: var(--strong);}
 
