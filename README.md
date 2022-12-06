@@ -78,13 +78,6 @@ With this method you can set options with data attributes
  
  ### Changing password requierments
 
--   4,
-- capitalLetters: 2,
-- lowerCaseLetters: 2,
-- numbers: 2,
-- specialCharacters: 2,
-
-
 | Parameter | Type     | Default                       |
 | :-------- | :------- | :-------------------------------- |
 | `miniumPasswordLength`      | `number` | 4 |
