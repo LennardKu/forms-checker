@@ -2,7 +2,7 @@
 
 const formChecker = {
   version: '2.1',
-  repoUrl: 'https://github.com/LennardKu/Password-Checker',
+  repoUrl: 'https://github.com/LennardKu/forms-checker',
   tooltipTitle: 'Password must contain',
   tooltipNames: {'capitalLetters':'Capital letters','lowerCaseLetters': 'Lowercase letters', 'numbers': 'Numbers','specialCharacters': 'Special characters' }, 
   miniumPasswordLength: 4,
